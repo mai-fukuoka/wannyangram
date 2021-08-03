@@ -12,8 +12,13 @@
     {{--ナビゲーションバー--}}
        @include('navbar')
        
-       {{--メインコンテンツ--}}
+       
     <div class="container">
+       {{-- エラーメッセージ --}}
+       @include('commons.error_messages')
+       
+       {{--メインコンテンツ--}}
+
        @yield('content')
 
     </div>

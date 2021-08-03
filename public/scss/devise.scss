@@ -1,0 +1,23 @@
+.devise-card {
+  border: none;
+}
+
+.logo-img {
+  background-image: url("/images/logo.jpg");
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 395px;
+  background-size: 400px;
+  margin-top: 50px;
+}
+
+.devise-link {
+  text-align: center;
+  margin: 16px 0;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
