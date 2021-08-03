@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #fff;
+  border-style: dashed;
+  height: 80px;
+}
+.navbar-brand {
+  height: 65px;
+  width: 210px;
+  background-size: 220px;
+}
+.navbar-mainLogo {
+  background-repeat: no-repeat;
+  background-image: url("/images/logo.jpg");
+  margin-top: 20px;
+}
+.navbar-nav > li {
+  margin-left: 20px;
+}
+.navbar-nav > li .commonNavIcon {
+  height: 24px;
+  width: 24px;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-image: url("/images/parts3.png");
+}
