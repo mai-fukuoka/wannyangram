@@ -23,8 +23,3 @@
   background-repeat: no-repeat;
   background-image: url("/images/parts3.png");
 }
-@media (max-width: 767px) {
-  .navbar-toggler {
-    margin-bottom: 20px;
-  }
-}

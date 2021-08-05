@@ -22,8 +22,8 @@
                 
         <div class="mt-5">
                 {!! Form::submit('サインインする',['class'=>'btn btn-outline-danger btn-block']) !!}
-            {!! Form::close() !!}
         </div>
+        {!! Form::close() !!}
             {{--ユーザー登録ページのリンク--}}
             <p class="mt-3 text-center">登録しますか？{!! link_to_route('signup.get','新規登録') !!}</p>
         </div>
