@@ -25,5 +25,7 @@ Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
 /*ユーザー詳細*/
 Route::group(['middleware'=>['auth']], function () {
-    Route::resource('users', 'UsersController', ['only'=>['show']]);
+    Route::resource('users', 'UsersController', ['only'=>['show','edit','update']]);
+    Route::post('upload', 'UsersController@upload')->name('upload');
+    Route::get('disp', 'UsersController@disp')->name('disp');
 });

@@ -14,7 +14,7 @@
             </li>
             {{--プロフィールボタンのリンク--}}
             <li class="nav-item mt-2">
-              <a class="nav-link commonNavIcon profile-icon" href="/users/{{Auth::user()->id}}"></a>
+              <a class="nav-link commonNavIcon profile-icon" href="/users/"></a>
             </li>
           </ul>
         </div>
