@@ -48,21 +48,21 @@ class UsersController extends Controller
         $user->password=bcrypt($request->password);
         $user->save();
         
-        return redirect('/');
+        return view('users.show', [
+            'user'=>$user,
+            ]);
     }
     
     public function upload(Request $request)
     {
+        $user=\Auth::user();
         $file = $request->file('file');
-        // 第一引数はディレクトリの指定
-        // 第二引数はファイル
-        // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
         $path = Storage::disk('s3')->put('/', $file, 'public');
-        // hogeディレクトリにアップロード
-        // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
-        // ファイル名を指定する場合はputFileAsを利用する
-        // $path = Storage::disk('s3')->putFileAs('/', $file, 'hoge.jpg', 'public');
-        return redirect('/');
+        $user->profile_photo = Storage::disk('s3')->url($path);
+        $user->save();
+        return view('users.show', [
+            'user'=>$user,
+            ]);
     }
 
     public function disp()

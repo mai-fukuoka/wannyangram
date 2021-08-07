@@ -28,4 +28,8 @@ Route::group(['middleware'=>['auth']], function () {
     Route::resource('users', 'UsersController', ['only'=>['show','edit','update']]);
     Route::post('upload', 'UsersController@upload')->name('upload');
     Route::get('disp', 'UsersController@disp')->name('disp');
+    
+    /*投稿新規画面*/
+    Route::get('posts/new', 'PostsController@new')->name('new');
+    Route::post('/posts', 'PostsController@store')->name('posts');
 });

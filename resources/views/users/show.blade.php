@@ -6,10 +6,10 @@
         <div class="col-md-4 text-center">
             @if($user->profile_photo)
             <p>
-                <img class="round-img" src="{{$path}}"/>
+                <img class="round-img" src="{{ $user->profile_photo }}">
             </p>
             @else
-                <img class="round-img" src="{{asset('/images/blank_profile.png')}}"/>
+                <img class="round-img" src="{{asset('/images/blank_profile.png')}}">
             @endif
         </div>
         <div class="col-md-8">
