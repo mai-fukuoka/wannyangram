@@ -7,6 +7,7 @@
         </button>
         <div class="collapse.navbar-collapse" id="nav-bar">
           <ul class="navbar-nav mr-auto"></ul>
+          @if(Auth::check())
           <ul class="navbar-nav">
             {{--投稿ボタンのリンク--}}
             <li class="nav-item">
@@ -14,9 +15,10 @@
             </li>
             {{--プロフィールボタンのリンク--}}
             <li class="nav-item mt-2">
-              <a class="nav-link commonNavIcon profile-icon" href="/users/"></a>
+              <a class="nav-link commonNavIcon profile-icon" href="/users/{{Auth::user()->id }}"></a>
             </li>
           </ul>
+          @endif
         </div>
       </div>
     </nav>

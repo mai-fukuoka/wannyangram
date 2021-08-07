@@ -19,6 +19,12 @@
             {!! link_to_route('users.show',$post->user->name,['user'=>$post->user->id]) !!}
         </div>
           <img class="img-fluid" src="{{ $post->caption }}">
+          @if ($post->user->id == Auth::user()->id)
+              <a class="ml-auto my-2" href="/posts/{{ $post->id }}" method="delete">
+                <div class="delete-post-icon">
+                </div>
+          	  </a>
+          @endif
             </div>
         </div>
     </div>

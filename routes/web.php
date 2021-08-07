@@ -32,4 +32,5 @@ Route::group(['middleware'=>['auth']], function () {
     /*投稿新規画面*/
     Route::get('posts/new', 'PostsController@new')->name('new');
     Route::post('/posts', 'PostsController@store')->name('posts');
+    Route::get('posts/{id}', 'PostsController@destroy');
 });
