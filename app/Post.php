@@ -12,4 +12,9 @@ class Post extends Model
     {
         return $this->belongsTo('App\User');
     }
+    
+    public function likes_users()
+    {
+        return $this->belongsTo(User::class, 'likes', 'post_id', 'user_id')->withTimestamps();
+    }
 }

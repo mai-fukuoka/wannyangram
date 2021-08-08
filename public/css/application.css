@@ -93,3 +93,14 @@ body {
   color: #262626;
   font-size: 20px;
 }
+.loved {
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 36px !important;
+}
+button {
+  border: none;
+  background-color: white;
+  outline: none;
+}

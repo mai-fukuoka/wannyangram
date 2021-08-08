@@ -70,4 +70,20 @@ class UsersController extends Controller
         $path = Storage::disk('s3')->url('hoge.jpg');
         return view('disp', compact('path'));
     }
+    
+    public function likes($id)
+    {
+        // idの値でユーザを検索して取得
+        $user= User::findOrFail($id);
+
+        // ユーザのお気に入り一覧を取得
+        $posts = $user->favorites();
+
+       
+        // お気に入り一覧ビューでそれらを表示
+        return view('users.lokes', [
+            'user' => $user,
+            'posts' => $posts,
+        ]);
+    }
 }

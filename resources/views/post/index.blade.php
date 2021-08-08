@@ -26,6 +26,23 @@
           	  </a>
           @endif
             </div>
+            <div class="card-body">
+          <div class="row parts">
+               @if (Auth::user()->is_like($post->id))
+                {!! Form::open(['route' => ['likes.unlike', $post->id], 'method' => 'delete']) !!}
+                <button class="button-outline" type="submit"><img class="loved" src="images/parts7.png"></button>
+                {!! Form::close() !!}
+                @else
+                {!! Form::open(['route' => ['likes.like', $post->id], 'method' => 'post']) !!}
+                <button class="button-outline" type="submit"><img class="loved" src="images/parts5.png"></button>
+                {!! Form::close() !!}
+              @endif
+            <a class="comment" href="#"></a>
+          </div>
+
+          <div>
+          </div>
+        </div>
         </div>
     </div>
     </div>
