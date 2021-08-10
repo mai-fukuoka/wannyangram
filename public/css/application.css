@@ -14,14 +14,21 @@
   margin-top: 20px;
 }
 .navbar-nav > li {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .navbar-nav > li .commonNavIcon {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   background-size: 22px;
   background-repeat: no-repeat;
   background-image: url("/images/parts3.png");
+}
+.navbar-nav > li .loved {
+  height: 32px;
+  width: 32px;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-image: url("/images/parts7.png");
 }
 body {
   font-size: 14px;
@@ -97,10 +104,27 @@ body {
   background-repeat: no-repeat;
   height: 36px;
   width: 36px;
-  background-size: 36px !important;
+  background-size: 36px;
 }
 button {
   border: none;
   background-color: white;
   outline: none;
+}
+.comment {
+  margin-left: 8px;
+  background-image: url("/images/parts6.png");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 40px;
+}
+.delete-comment {
+  background-image: url("/images/parts8.png");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 11px;
+  float: right;
+  margin: 5px 0 0 10px;
+  background-size: 11px;
 }

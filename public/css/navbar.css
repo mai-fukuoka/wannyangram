@@ -14,12 +14,19 @@
   margin-top: 20px;
 }
 .navbar-nav > li {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .navbar-nav > li .commonNavIcon {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   background-size: 22px;
   background-repeat: no-repeat;
   background-image: url("/images/parts3.png");
+}
+.navbar-nav > li .loved {
+  height: 32px;
+  width: 32px;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-image: url("/images/parts7.png");
 }

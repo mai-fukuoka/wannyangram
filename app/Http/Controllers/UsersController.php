@@ -77,11 +77,11 @@ class UsersController extends Controller
         $user= User::findOrFail($id);
 
         // ユーザのお気に入り一覧を取得
-        $posts = $user->favorites();
+        $posts = $user->likes()->orderBy('created_at', 'desc')->paginate(10);
 
        
         // お気に入り一覧ビューでそれらを表示
-        return view('users.lokes', [
+        return view('users.likes', [
             'user' => $user,
             'posts' => $posts,
         ]);

@@ -18,9 +18,7 @@ class PostsController extends Controller
     
     public function index()
     {
-        $posts = Post::limit(10)
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $posts=Post::orderBy('created_at', 'desc')->paginate(3);
             
         return view('post/index', ['posts' => $posts]);
     }
@@ -32,6 +30,9 @@ class PostsController extends Controller
     
     public function store(Request $request)
     {
+        $request->validate([
+            '' => 'required|max:255',
+        ]);
         $post = new Post;
         
         $file = $request->file('file');

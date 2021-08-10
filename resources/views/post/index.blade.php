@@ -37,8 +37,20 @@
                 <button class="button-outline" type="submit"><img class="loved" src="images/parts5.png"></button>
                 {!! Form::close() !!}
               @endif
-            <a class="comment" href="#"></a>
-          </div>
+              <a class="comment"></a>
+             </div>
+            <div class="comment-post">
+                @include('post.comment_list')
+            </div>
+            <div class="row">
+                <form class="w-100 new-comment" action="/posts/{{$post->id}}/comments" method="post">
+                    @csrf 
+                    <input value="{{Auth::user()->id}}" type="hidden" name="user_id"/>
+                    <input value="{{$post->id}}" type="hidden" name="post_id"/>
+                    <input class="form-control" placeholder="コメント ..." autocomplete="off" type="text" name="comment" />
+                </form>
+            </div>
+        
 
           <div>
           </div>
@@ -47,4 +59,5 @@
     </div>
     </div>
 @endforeach
+{{ $posts->links() }}
 @endsection

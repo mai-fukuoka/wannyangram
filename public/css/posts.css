@@ -27,3 +27,20 @@ button {
   background-color: white;
   outline: none;
 }
+.comment {
+  margin-left: 8px;
+  background-image: url("/images/parts6.png");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 40px;
+}
+.delete-comment {
+  background-image: url("/images/parts8.png");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 11px;
+  float: right;
+  margin: 5px 0 0 10px;
+  background-size: 11px;
+}

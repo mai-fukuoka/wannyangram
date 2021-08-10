@@ -34,9 +34,16 @@ Route::group(['middleware'=>['auth']], function () {
     Route::post('/posts', 'PostsController@store')->name('posts');
     Route::get('posts/{id}', 'PostsController@destroy');
     
+    /*コメント投稿機能*/
+    Route::post('/posts/{comment_id}/comments', 'CommentsController@store')->name('comments.store');
+    Route::get('/comments/{comment_id}', 'CommentsController@destroy');
+    
+    
     /*お気に入り登録*/
     Route::group(['prefix'=>'posts/{id}'], function () {
         Route::post('like', 'LikesController@store')->name('likes.like');
         Route::delete('unlike', 'LikesController@destroy')->name('likes.unlike');
     });
+    /*お気に入り一覧表示*/
+    Route::get('/users/{user}/likes', 'UsersController@likes')->name('users.likes');
 });

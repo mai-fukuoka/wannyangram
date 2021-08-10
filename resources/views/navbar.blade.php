@@ -17,6 +17,10 @@
             <li class="nav-item mt-2">
               <a class="nav-link commonNavIcon profile-icon" href="/users/{{Auth::user()->id }}"></a>
             </li>
+            {{--お気に入りのリンク--}}
+            <li class="nav-item mt-2">
+              <a class="nav-link loved" href="/users/{{Auth::user()->id }}/likes"></a>
+            </li>
           </ul>
           @endif
         </div>
