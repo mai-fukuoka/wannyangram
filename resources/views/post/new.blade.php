@@ -13,6 +13,7 @@
             <form action="/posts" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="file" name="file">
+                <input type="hidden" name="caption">
                  <button type="submit">投稿する</button>
             </form>
         </div>

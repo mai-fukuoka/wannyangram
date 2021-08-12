@@ -30,14 +30,15 @@
           <div class="row parts">
                @if (Auth::user()->is_like($post->id))
                 {!! Form::open(['route' => ['likes.unlike', $post->id], 'method' => 'delete']) !!}
-                <button class="button-outline" type="submit"><img class="loved" src="images/parts7.png"></button>
+                <button class="button-outline" type="submit"><img class="loved" src="/images/parts7.png"></button>
                 {!! Form::close() !!}
                 @else
                 {!! Form::open(['route' => ['likes.like', $post->id], 'method' => 'post']) !!}
-                <button class="button-outline" type="submit"><img class="loved" src="images/parts5.png"></button>
+                <button class="button-outline" type="submit"><img class="loved" src="/images/parts5.png"></button>
                 {!! Form::close() !!}
               @endif
               <a class="comment"></a>
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
              </div>
             <div class="comment-post">
                 @include('post.comment_list')
@@ -59,5 +60,7 @@
     </div>
     </div>
 @endforeach
-{{ $posts->links() }}
+<div class="d-flex justify-content-center">{{ $posts->links() }}</div>
 @endsection
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

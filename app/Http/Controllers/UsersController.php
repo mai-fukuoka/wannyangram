@@ -77,7 +77,7 @@ class UsersController extends Controller
         $user= User::findOrFail($id);
 
         // ユーザのお気に入り一覧を取得
-        $posts = $user->likes()->orderBy('created_at', 'desc')->paginate(10);
+        $posts = $user->likes()->orderBy('created_at', 'desc')->paginate(5);
 
        
         // お気に入り一覧ビューでそれらを表示
