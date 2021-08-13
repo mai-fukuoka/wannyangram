@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
+      <div class="container" >
         <a class="navbar-brand navbar-mainLogo" href="/"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar">
           <span class="navbar-toggler-icon"></span>
